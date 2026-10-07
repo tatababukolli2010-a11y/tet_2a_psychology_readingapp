@@ -1,0 +1,504 @@
+<!doctype html><html lang="te"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body style="margin:0"><title>బాల వికాసం 2A పఠనం 401–500</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Noto+Sans+Telugu:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: a single study column like a teacher's notebook — header with photo, sticky reading bar, numbered question sheets, matching tables on a second tab */
+:root{
+  --bg:#f3f5f1; --paper:#ffffff; --ink:#1d2a26; --muted:#5d6b66; --line:#d9e0db;
+  --accent:#0f6b5a; --accent-ink:#ffffff; --gold:#b8790f; --right:#e3f2e9; --right-ink:#145c37; --now:#fff6dc;
+  --f-display:"Tiro Telugu","Noto Serif Telugu",serif;
+  --f-body:"Noto Sans Telugu","Nirmala UI","Gautami",system-ui,sans-serif;
+  --f-en:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121816; --paper:#1a2220; --ink:#e7eeea; --muted:#9fb0a9; --line:#2c3833;
+  --accent:#4fbfa4; --accent-ink:#0d1714; --gold:#e3b155; --right:#1d3a2c; --right-ink:#9fe0bb; --now:#33301f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121816; --paper:#1a2220; --ink:#e7eeea; --muted:#9fb0a9; --line:#2c3833;
+  --accent:#4fbfa4; --accent-ink:#0d1714; --gold:#e3b155; --right:#1d3a2c; --right-ink:#9fe0bb; --now:#33301f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding-inline:16px;padding-block:20px 8px}
+header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding-block:12px 18px}
+header img{width:128px;height:128px;object-fit:cover;object-position:center 20%;border-radius:50%;border:4px solid var(--paper);box-shadow:0 0 0 2px var(--accent)}
+header h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.3;margin:0;text-wrap:balance}
+header p{margin:0;color:var(--muted);font-size:.95rem}
+.tag{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);font-family:var(--f-en);font-weight:600}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button,select{font:inherit;font-size:.95rem}
+.btn{border:2px solid var(--accent);background:transparent;color:var(--accent);border-radius:10px;padding:8px 16px;cursor:pointer;font-weight:600}
+.btn.on{background:var(--accent);color:var(--accent-ink)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn:focus-visible,select:focus-visible,.tab:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+select{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:7px 8px;min-width:0}
+.status{font-size:.88rem;color:var(--muted);flex:1 1 200px;min-width:0}
+.tabs{display:flex;gap:4px}
+.tab{flex:1;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:8px;border-radius:8px;cursor:pointer;font-weight:600}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.notice{font-size:.85rem;background:var(--now);border-radius:8px;padding:8px 12px}
+main{display:flex;flex-direction:column;gap:16px;padding-block:16px}
+.q{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:170px;transition:background .3s}
+.q.reading{background:var(--now);border-color:var(--gold)}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.qno{font-family:var(--f-en);font-weight:600;color:var(--accent);font-size:1.05rem;font-variant-numeric:tabular-nums}
+.say{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:20px;padding:3px 12px;cursor:pointer;font-size:.85rem}
+.say:hover{color:var(--accent);border-color:var(--accent)}
+.en{font-family:var(--f-en);font-size:1.02rem}
+.qtext .en{font-weight:600}
+.qtext .te{font-weight:600}
+ol.opts{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+ol.opts li{display:grid;grid-template-columns:2rem 1fr;gap:6px;padding:6px 10px;border-radius:8px;border:1px solid var(--line)}
+ol.opts li>div{min-width:0}
+ol.opts li.ok{background:var(--right);color:var(--right-ink);border-color:transparent;font-weight:600}
+.on-num{font-family:var(--f-en);font-weight:600;font-variant-numeric:tabular-nums}
+.ans{font-weight:700;color:var(--right-ink);background:var(--right);border-radius:8px;padding:6px 12px}
+.exp{border-top:1px dashed var(--line);padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.exp b{color:var(--gold);font-weight:700}
+.sm{font-size:.94rem}
+section.match{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px}
+section.match h2{font-family:var(--f-display);font-weight:400;font-size:1.35rem;margin:0}
+section.match h2 span{display:block;font-family:var(--f-en);font-size:.9rem;color:var(--muted)}
+.tblw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-family:var(--f-en)}
+td.n{font-family:var(--f-en);color:var(--muted);font-variant-numeric:tabular-nums;width:2.2rem}
+tr.reading td{background:var(--now)}
+footer{text-align:center;padding-block:22px 28px;border-top:2px solid var(--accent);margin-top:8px;font-family:var(--f-display);font-size:1.15rem;color:var(--accent)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.sw{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);cursor:pointer;padding:4px;border-radius:24px;font:inherit}
+.sw .track{position:relative;width:52px;height:30px;border-radius:15px;background:var(--line);transition:background .2s;flex:none}
+.sw .knob{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:var(--paper);box-shadow:0 1px 3px rgba(0,0,0,.3);transition:left .2s}
+.sw[aria-checked="true"] .track{background:var(--accent)}
+.sw[aria-checked="true"] .knob{left:25px}
+.sw .swlbl{font-family:var(--f-en);font-weight:700;font-size:.85rem;color:var(--muted);min-width:2.2em;text-align:left}
+.sw[aria-checked="true"] .swlbl{color:var(--accent)}
+.sw.big .track{width:72px;height:40px;border-radius:20px}
+.sw.big .knob{width:34px;height:34px}
+.sw.big[aria-checked="true"] .knob{left:35px}
+.sw.big .swlbl{font-family:var(--f-body);font-size:1.05rem;color:var(--ink);font-weight:600}
+.sw.big .swlbl b{font-family:var(--f-en);color:var(--accent);margin-right:6px}
+.sw:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <img src="data:image/jpeg;base64,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" alt="ఉపాధ్యాయుడు కొల్లి తాతబాబు">
+  <span class="tag">AP TET · Paper II(A) · CDP</span>
+  <h1>శిశు వికాసం &amp; పెడగాజీ — స్వయం పఠనం</h1>
+  <p>ప్రశ్నలు 401–500 · సమాధానం · వివరణ (English + తెలుగు)</p>
+</header>
+
+<div class="bar">
+  <div class="row mainrow">
+    <button class="sw big" id="mainSw" role="switch" aria-checked="false" aria-label="అన్ని ప్రశ్నలు చదవడం ON/OFF"><span class="track"><span class="knob"></span></span><span class="swlbl"><b id="mainTxt">OFF</b> అన్ని ప్రశ్నలు చదువు</span></button>
+  </div>
+  <div class="row">
+    <select id="lang" aria-label="చదివే భాష">
+      <option value="both">English + తెలుగు</option>
+      <option value="te">తెలుగు మాత్రమే</option>
+      <option value="en">English మాత్రమే</option>
+    </select>
+    <select id="rate" aria-label="వేగం">
+      <option value="0.8">నెమ్మది</option>
+      <option value="0.95" selected>సాధారణ వేగం</option>
+      <option value="1.15">వేగంగా</option>
+    </select>
+  </div>
+  <div class="row"><span class="status" id="status">పై స్విచ్ ON చేస్తే అన్ని ప్రశ్నలు వరుసగా చదువుతుంది. ఒక్కో ప్రశ్న పక్కన ఉన్న స్విచ్ ON చేస్తే ఆ ప్రశ్న మాత్రమే చదువుతుంది. OFF చేస్తే ఆగుతుంది.</span></div>
+  <div class="notice" id="noTe" hidden>మీ ఫోన్/బ్రౌజర్‌లో తెలుగు వాయిస్ కనిపించలేదు. ఫోన్ Settings → Text-to-speech లో తెలుగు భాష జోడిస్తే తెలుగు స్పష్టంగా వినిపిస్తుంది.</div>
+  <div class="notice" id="noTTS" hidden>ఈ యాప్‌లో చదివే సౌకర్యం అందుబాటులో లేదు. ఈ పేజీని Chrome బ్రౌజర్‌లో తెరవండి.</div>
+</div>
+
+<main id="qList"></main>
+
+<footer>ఈ యాప్ ఉపాధ్యాయుడు కొల్లి తాతబాబు చే డిజైన్ చేయబడింది</footer>
+</div>
+
+<script>
+const R = [
+[401,"Operant conditioning theory is also called","కార్యసాధక సిద్ధాంతాన్ని ఇలా కూడా పిలుస్తారు","Instrumental learning","పరికరాత్మక అభ్యసనం",
+"The response acts as an instrument to get a reward, so operant conditioning is also called instrumental learning.",
+"ప్రతిస్పందన బహుమతి పొందడానికి సాధనంగా పనిచేస్తుంది. అందుకే కార్యసాధక నిబంధనను పరికరాత్మక అభ్యసనం అంటారు."],
+[402,"Skinner used this animal in his experiments","స్కిన్నర్ తన ప్రయోగాలలో ఈ జంతువును ఉపయోగించారు","Rat","ఎలుక",
+"Skinner used rats (and pigeons) in the Skinner box; the rat pressed a lever to get food.",
+"స్కిన్నర్ బాక్స్‌లో ఎలుకలను (పావురాలను కూడా) వాడారు. ఎలుక లివర్ నొక్కి ఆహారం పొందేది."],
+[403,"Operant conditioning is also called","కార్యసాధక నిబంధనం ఈ విధంగా పిలువబడుతుంది","R-type","R-రకం",
+"In operant conditioning the response (R) comes first and is then reinforced, so it is R-type.",
+"కార్యసాధక నిబంధనలో ముందు ప్రతిస్పందన (R) వస్తుంది, తర్వాత పునర్బలనం. అందుకే R-రకం."],
+[404,"In Skinner's operant conditioning, reinforcement is given only to the","స్కిన్నర్ కార్యసాధక నిబంధనలో పునర్బలనం దీనికి మాత్రమే ఇవ్వబడుతుంది","Correct response","సరైన ప్రతిస్పందనకు",
+"Only the desired (correct) response is reinforced, so it is repeated.",
+"కోరుకున్న సరైన ప్రతిస్పందనకే పునర్బలనం ఇస్తారు. అందుకే అది మళ్లీ వస్తుంది."],
+[405,"A boy is doing project work. Giving reinforcement every 5 minutes is","ప్రాజెక్ట్ పని చేస్తున్న బాలుడికి ప్రతి 5 నిమిషాలకు పునర్బలనం ఇవ్వడం","Fixed interval reinforcement schedule","స్థిరకాల వ్యవధి పునర్బలన నియమం",
+"Reinforcement after a fixed amount of time is a fixed interval schedule.",
+"నిర్ణీత సమయం తర్వాత పునర్బలనం ఇవ్వడం స్థిరకాల వ్యవధి నియమం."],
+[406,"A: Skinner conducted experiments on a chimpanzee. B: Pavlov conducted experiments on a dog.","A: స్కిన్నర్ చింపాంజీపై ప్రయోగాలు చేశారు. B: పావ్‌లోవ్ కుక్కపై ప్రయోగాలు చేశారు.","Only B is correct","B మాత్రమే సరైనది",
+"Skinner used rats; Köhler used chimpanzees. Pavlov did use dogs, so only B is correct.",
+"స్కిన్నర్ ఎలుకలను వాడారు, చింపాంజీలను కోహ్లర్ వాడారు. పావ్‌లోవ్ కుక్కలను వాడారు. కాబట్టి B మాత్రమే సరైనది."],
+[407,"A: Classical conditioning theory was proposed by Ivan Pavlov. B: Operant conditioning theory was developed by Thorndike.","A: శాస్త్రీయ నిబంధన సిద్ధాంతాన్ని ఇవాన్ పావ్‌లోవ్ ప్రతిపాదించారు. B: కార్యసాధక నిబంధనను థార్న్‌డైక్ అభివృద్ధిపరిచారు.","Only A is correct","A మాత్రమే సరైనది",
+"Operant conditioning is Skinner's theory, not Thorndike's. So only A is correct.",
+"కార్యసాధక నిబంధన స్కిన్నర్ సిద్ధాంతం, థార్న్‌డైక్‌ది కాదు. కాబట్టి A మాత్రమే సరైనది."],
+[408,"A: Pavlov's conditioning theory is called S-type. B: Skinner's conditioning theory is called R-type.","A: పావ్‌లోవ్ నిబంధన సిద్ధాంతాన్ని S-రకం అంటాము. B: స్కిన్నర్ నిబంధన సిద్ధాంతాన్ని R-రకం అంటాము.","Both A & B are correct","A, B రెండూ సరైనవి",
+"Classical is stimulus-based (S-type) and operant is response-based (R-type). Both are correct.",
+"శాస్త్రీయ నిబంధన ఉద్దీపన ఆధారితం (S-రకం), కార్యసాధక నిబంధన ప్రతిస్పందన ఆధారితం (R-రకం). రెండూ సరైనవి."],
+[409,"Giving reinforcement for every correct answer of a student. The schedule here is","విద్యార్థి ఇచ్చే ప్రతి సరైన సమాధానానికి పునర్బలనం ఇవ్వడం. ఇందులోని పునర్బలన నియమం","Continuous","నిరంతర",
+"Reinforcing every correct response is continuous reinforcement.",
+"ప్రతి సరైన ప్రతిస్పందనకు పునర్బలనం ఇవ్వడం నిరంతర పునర్బలనం."],
+[410,"A boy answering a questionnaire gets reinforcement for every three responses. The schedule is","ప్రశ్నావళికి సమాధానాలు ఇస్తున్న బాలుడికి ప్రతి మూడు ప్రతిస్పందనలకు పునర్బలనం ఇవ్వడం","Fixed ratio","స్థిర నిష్పత్తి",
+"Reinforcement after a fixed number of responses is a fixed ratio schedule.",
+"నిర్ణీత సంఖ్యలో ప్రతిస్పందనల తర్వాత పునర్బలనం ఇవ్వడం స్థిర నిష్పత్తి నియమం."],
+[411,"Client-centred therapy was developed by","సహాయార్థి కేంద్రిత చికిత్సను అభివృద్ధిపరిచినది","Carl Rogers","కార్ల్ రోజర్స్",
+"Carl Rogers, a humanistic psychologist, gave client-centred (non-directive) therapy.",
+"మానవతావాద మనోవిజ్ఞానవేత్త కార్ల్ రోజర్స్ సహాయార్థి కేంద్రిత (అనిర్దేశక) చికిత్సను ఇచ్చారు."],
+[412,"The 'Theory of Hierarchy of Needs' was developed by","'అవసరాల అనుక్రమణ సిద్ధాంతం' ను అభివృద్ధిపరిచినది","Maslow","మాస్లో",
+"Abraham Maslow arranged human needs in a pyramid, from physiological needs to self-actualization.",
+"అబ్రహం మాస్లో మానవ అవసరాలను శారీరక అవసరాల నుండి స్వీయ సిద్ధి వరకు పిరమిడ్‌గా అమర్చారు."],
+[414,"This is a physiological need according to Maslow","మాస్లో ప్రకారం ఇది శారీరక అవసరం","Food","ఆహారం",
+"Food, water, air and sleep are physiological needs at the base of the pyramid.",
+"ఆహారం, నీరు, గాలి, నిద్ర పిరమిడ్ అడుగున ఉండే శారీరక అవసరాలు."],
+[415,"According to Maslow, a house is a","మాస్లో ప్రకారం ఇల్లు అనేది","Safety need","భద్రత అవసరం",
+"Shelter gives protection and security, so a house is a safety need.",
+"ఇల్లు రక్షణ, భద్రత ఇస్తుంది. కాబట్టి అది భద్రత అవసరం."],
+[416,"According to Maslow, affection is a","మాస్లో ప్రకారం వాత్సల్యం అనేది","Love and belonging need","ప్రేమ సంబంధిత అవసరం",
+"Affection, friendship and family belong to love and belonging needs.",
+"వాత్సల్యం, స్నేహం, కుటుంబం ప్రేమ సంబంధిత అవసరాలు."],
+[418,"This is not an advantage of experiential learning","అనుభవపూర్వక అభ్యసనం యొక్క ప్రయోజనం కానిది","Students are not happy with this learning","ఈ అభ్యసనతో విద్యార్థులు ఆనందంగా ఉండరు",
+"Experiential learning is child-centred, builds life skills and creativity, and children enjoy it.",
+"అనుభవపూర్వక అభ్యసనం విద్యార్థి కేంద్రితం, జీవన నైపుణ్యాలు, సృజనాత్మకత పెంచుతుంది. పిల్లలు దీనిని ఆనందిస్తారు."],
+[419,"Maslow's theory is related to","మాస్లో సిద్ధాంతం వీటికి సంబంధించినది","Needs","అవసరాలు",
+"Maslow's theory explains motivation through a hierarchy of needs.",
+"మాస్లో సిద్ధాంతం అవసరాల అనుక్రమణ ద్వారా ప్రేరణను వివరిస్తుంది."],
+[420,"This is a lower order need according to Maslow","మాస్లో ప్రకారం ఇది దిగువ శ్రేణి అవసరం","Physiological needs","శారీరక అవసరాలు",
+"Physiological needs are at the lowest level and must be met first.",
+"శారీరక అవసరాలు అత్యంత దిగువ స్థాయి. ఇవి ముందుగా తీరాలి."],
+[421,"Social learning theory was proposed by","సాంఘిక అభ్యసన సిద్ధాంతాన్ని ప్రతిపాదించినవారు","Bandura","బండూరా",
+"Albert Bandura said we learn by observing and imitating others.",
+"ఇతరులను పరిశీలించి అనుకరించడం ద్వారా నేర్చుకుంటామని ఆల్బర్ట్ బండూరా చెప్పారు."],
+[422,"According to Bandura, learning occurs by","బండూరా ప్రకారం అభ్యసనం ఇలా జరుగుతుంది","Imitation","అనుకరణ ద్వారా",
+"Children learn by imitating models such as parents, teachers and peers.",
+"పిల్లలు తల్లిదండ్రులు, ఉపాధ్యాయులు, స్నేహితుల వంటి నమూనాలను అనుకరించి నేర్చుకుంటారు."],
+[423,"This is not another name of Bandura's theory","బండూరా సిద్ధాంతానికి మరొక పేరు కానిది","Learning by association","సంసర్గముతో అభ్యసనం",
+"Bandura's theory is also called learning by modelling, observation or imitation. Learning by association belongs to Pavlov.",
+"బండూరా సిద్ధాంతాన్ని నమూనా, పరిశీలన, అనుకరణ అభ్యసనం అంటారు. సంసర్గ అభ్యసనం పావ్‌లోవ్‌ది."],
+[424,"This is not a step in Bandura's theory","బండూరా సిద్ధాంతంలో లేని సోపానం","Generalization","సామాన్యీకరణం",
+"Bandura's steps: attention, retention, reproduction (performance) and motivation/reinforcement.",
+"బండూరా సోపానాలు: అవధానం, ధారణ, పునరుత్పాదన, ప్రేరణ/పునర్బలనం."],
+[425,"In Bandura's theory, 'remembering the observed behaviour' is called","బండూరా సిద్ధాంతంలో 'పరిశీలించిన ప్రవర్తనను జ్ఞప్తిలో ఉంచడం' ను ఇలా అంటాము","Retention","ధారణ",
+"After paying attention, the learner must retain (remember) the behaviour to copy it later.",
+"అవధానం తర్వాత, ఆ ప్రవర్తనను తర్వాత అనుకరించడానికి గుర్తుంచుకోవడం ధారణ."],
+[426,"A child watches the teacher solve a problem and later solves similar problems. This learning is","ఉపాధ్యాయుడు సమస్యను పరిష్కరిస్తుండగా గమనించిన పిల్లవాడు తర్వాత అలాంటి సమస్యలను సాధించాడు. ఇక్కడి అభ్యసన రకం","Observation learning","పరిశీలనా అభ్యసనం",
+"Learning by watching a model is observation learning (Bandura).",
+"నమూనాను గమనించి నేర్చుకోవడం పరిశీలనా అభ్యసనం (బండూరా)."],
+[427,"The first step of Bandura's social learning theory","బండూరా సాంఘిక అనుకరణ అభ్యసనంలో మొదటి సోపానం","Attention","అవధానం",
+"Nothing can be learned from a model unless the learner first pays attention.",
+"ముందు శ్రద్ధ పెట్టకపోతే నమూనా నుండి ఏదీ నేర్చుకోలేము. కాబట్టి అవధానం మొదటిది."],
+[428,"Bandura demonstrated observation learning through this experiment","బండూరా ఈ ప్రయోగం ద్వారా పరిశీలనా అభ్యసనాన్ని తెలియజేశారు","Bobo doll experiment","బోబో డాల్ ప్రయోగం",
+"Children who saw an adult hit a Bobo doll later hit it themselves.",
+"బోబో బొమ్మను పెద్దవారు కొట్టడం చూసిన పిల్లలు తర్వాత తామూ కొట్టారు."],
+[429,"According to Bandura, these are important for learning: A) Novel observation B) Keen observation C) Imitation","బండూరా ప్రకారం అభ్యసనానికి ముఖ్యమైనవి: A) నవ్యతతో కూడిన పరిశీలన B) నిశిత పరిశీలన C) అనుకరణ","A, B, C all are correct","A, B, C అన్నీ సరైనవే",
+"Observation (novel and keen) and imitation are all central to Bandura's theory.",
+"నవ్య, నిశిత పరిశీలన, అనుకరణ – మూడూ బండూరా సిద్ధాంతానికి ముఖ్యం."],
+[430,"The author of 'Social Learning and Personality Development' is","'సోషల్ లెర్నింగ్ అండ్ పర్సనాలిటీ డెవలప్‌మెంట్' పుస్తక రచయిత","Bandura","బండూరా",
+"Bandura wrote this book with Richard Walters in 1963.",
+"బండూరా 1963లో రిచర్డ్ వాల్టర్స్‌తో కలిసి ఈ పుస్తకం రాశారు."],
+[431,"The book 'The Process of Education' was written by","'ది ప్రాసెస్ ఆఫ్ ఎడ్యుకేషన్' పుస్తక రచయిత","Jerome Bruner","జెరోమ్ బ్రూనర్",
+"Jerome Bruner wrote 'The Process of Education' in 1960.",
+"జెరోమ్ బ్రూనర్ 1960లో 'ది ప్రాసెస్ ఆఫ్ ఎడ్యుకేషన్' రాశారు."],
+[432,"According to Bruner's theory of instruction, this is incorrect","బ్రూనర్ శిక్షణా సిద్ధాంతం ప్రకారం సరికానిది","Punishment","శిక్షించడం",
+"Bruner's theory includes readiness, structure (content construction), sequence and reinforcement. Punishment is not a part.",
+"బ్రూనర్ సిద్ధాంతంలో సంసిద్ధత, విషయ నిర్మాణం, క్రమం, పునర్బలనం ఉంటాయి. శిక్ష కాదు."],
+[433,"According to Bruner, this type of motivation has more influence on the learner","బ్రూనర్ ప్రకారం ఈ రకమైన ప్రేరణ విద్యార్థిపై అధిక ప్రభావం చూపుతుంది","Intrinsic motivation","అంతర్గత ప్రేరణ",
+"Bruner valued curiosity and the joy of discovery, which are intrinsic motivation.",
+"బ్రూనర్ కుతూహలం, కనుగొనే ఆనందం అనే అంతర్గత ప్రేరణకు విలువనిచ్చారు."],
+[434,"According to Bruner","బ్రూనర్ ప్రకారం","Interest and curiosity of the learner are major learning factors","విద్యార్థిలో ఆసక్తి, కుతూహలం అభ్యసనానికి ప్రధాన అంశాలు",
+"Bruner stressed self-learning driven by interest and curiosity, not teacher-centred learning.",
+"ఉపాధ్యాయ కేంద్రితం కాకుండా ఆసక్తి, కుతూహలంతో సాగే స్వీయ అభ్యసనానికి బ్రూనర్ ప్రాధాన్యం ఇచ్చారు."],
+[435,"Bruner's theory is also known as","బ్రూనర్ సిద్ధాంతాన్ని ఇలా కూడా అంటారు","Discovery learning theory","ఆవిష్కరణ అభ్యసన సిద్ధాంతం",
+"Bruner wanted children to discover principles by themselves: discovery learning.",
+"పిల్లలు సూత్రాలను తామే కనుగొనాలని బ్రూనర్ కోరారు. ఇది ఆవిష్కరణ అభ్యసనం."],
+[436,"Bruner's approach gives importance to","బ్రూనర్ వాదం దీనికి ప్రాధాన్యతనిస్తుంది","Self learning","స్వీయ అభ్యసనం",
+"Discovery learning means the child learns by himself.",
+"ఆవిష్కరణ అభ్యసనంలో పిల్లవాడు తనంతట తానే నేర్చుకుంటాడు."],
+[437,"Presenting subject matter in a meaningful and organised form is","బోధించాల్సిన విషయాలను అర్థవంతంగా, క్రమపద్ధతిలో అందించడంలో ఉండేది","Content construction","విషయ నిర్మాణం",
+"Bruner said content must be structured meaningfully so learners can grasp it.",
+"విషయాన్ని అర్థవంతంగా నిర్మిస్తే అభ్యాసకులు సులభంగా గ్రహిస్తారని బ్రూనర్ చెప్పారు."],
+[438,"\"Any concept can be taught effectively to anyone at any stage of development\" was said by","'ఏ విషయమైనా ఎవరికైనా ఏ వికాస దశలోనైనా ఫలవంతంగా బోధించవచ్చు' అని చెప్పినది","Jerome Bruner","జెరోమ్ బ్రూనర్",
+"This famous statement is Bruner's, the basis of the spiral curriculum.",
+"ఈ ప్రసిద్ధ వాక్యం బ్రూనర్‌ది. సర్పిలాకార పాఠ్యప్రణాళికకు ఇదే ఆధారం."],
+[439,"According to Bruner, the correct order of teaching: A) Enactive B) Iconic C) Symbolic","బ్రూనర్ ప్రకారం సరైన బోధనా క్రమం: A) క్రియాత్మక B) చిత్ర ప్రతిమ C) ప్రతీకాత్మక","A, B, C","A, B, C",
+"Children learn first by doing (enactive), then through pictures (iconic), then through symbols and words.",
+"పిల్లలు ముందు చేసి (క్రియాత్మక), తర్వాత చిత్రాల ద్వారా (చిత్ర ప్రతిమ), తర్వాత గుర్తులు, పదాల ద్వారా (ప్రతీకాత్మక) నేర్చుకుంటారు."],
+[440,"In Bruner's theory, the teacher mainly acts as a","బ్రూనర్ సిద్ధాంతంలో ఉపాధ్యాయుడు ముఖ్యంగా ఇలా వ్యవహరించాలి","Monitor (facilitator)","పర్యవేక్షకుడు",
+"In discovery learning the teacher guides and monitors; he does not dictate.",
+"ఆవిష్కరణ అభ్యసనంలో ఉపాధ్యాయుడు మార్గదర్శనం, పర్యవేక్షణ చేస్తాడు, ఆదేశించడు."],
+[441,"According to Bruner, learning through diagrams and pictures represents","బ్రూనర్ ప్రకారం చిత్రాలు, బొమ్మల ద్వారా అభ్యసనాన్ని సూచించేది","Iconic method","చిత్ర ప్రతిమ పద్ధతి",
+"Learning through images and pictures is the iconic mode.",
+"చిత్రాలు, బొమ్మల ద్వారా నేర్చుకోవడం చిత్ర ప్రతిమ పద్ధతి."],
+[442,"Vygotsky belongs to this country","వైగోట్స్కీ ఈ దేశానికి చెందినవారు","Russia","రష్యా",
+"Lev Vygotsky was a Russian (Soviet) psychologist.",
+"లెవ్ వైగోట్స్కీ రష్యాకు చెందిన మనోవిజ్ఞానవేత్త."],
+[443,"Socio-cultural theory was developed by","సాంఘిక సాంస్కృతిక సిద్ధాంతాన్ని అభివృద్ధిపరిచినవారు","Vygotsky","వైగోట్స్కీ",
+"Vygotsky said learning develops through social interaction and culture.",
+"సామాజిక పరస్పర చర్య, సంస్కృతి ద్వారా అభ్యసనం జరుగుతుందని వైగోట్స్కీ చెప్పారు."],
+[444,"The concept of ZPD was given by","ZPD అనే భావనను అందించినవారు","Vygotsky","వైగోట్స్కీ",
+"ZPD (Zone of Proximal Development) is Vygotsky's key idea.",
+"ZPD (సమీప వికాస మండలం) వైగోట్స్కీ ముఖ్య భావన."],
+[445,"This concept is not related to Vygotsky","వైగోట్స్కీకి చెందని భావన","Schemata","స్కీమాటా",
+"ZPD, scaffolding and reciprocal teaching relate to Vygotsky. Schemata is Piaget's term.",
+"ZPD, సారువా (స్కాఫోల్డింగ్), పరస్పర బోధన వైగోట్స్కీకి చెందినవి. స్కీమాటా పియాజే పదం."],
+[446,"According to Vygotsky, ZPD means","వైగోట్స్కీ ప్రకారం ZPD అనగా","Zone of Proximal Development","జోన్ ఆఫ్ ప్రాక్సిమల్ డెవలప్‌మెంట్ (సమీప వికాస మండలం)",
+"ZPD is the gap between what a child can do alone and what he can do with help.",
+"పిల్లవాడు ఒంటరిగా చేయగలిగిన దానికి, సహాయంతో చేయగలిగిన దానికి మధ్య తేడాయే ZPD."],
+[447,"This is not a lower mental function according to Vygotsky","వైగోట్స్కీ ప్రకారం దిగువ స్థాయి మానసిక ప్రక్రియ కానిది","Reasoning","వివేచించడం",
+"Reasoning is a higher mental function. Observing and comparing are lower ones.",
+"వివేచన ఉన్నత స్థాయి మానసిక ప్రక్రియ. పరిశీలించడం, పోల్చడం దిగువ స్థాయివి."],
+[448,"This belongs to lower mental functions according to Vygotsky (as per answer key)","వైగోట్స్కీ ప్రకారం దిగువ స్థాయి మానసిక ప్రక్రియకు చెందినది (జవాబు కీ ప్రకారం)","Questioning","ప్రశ్నించడం",
+"The key places simple questioning among lower mental functions; reasoning, discrimination and analysing are higher.",
+"జవాబు కీ ప్రకారం ప్రశ్నించడం దిగువ స్థాయి ప్రక్రియ. వివేచన, విచక్షణ, విశ్లేషణ ఉన్నత స్థాయివి."],
+[449,"This is not a higher mental function according to Vygotsky","వైగోట్స్కీ ప్రకారం ఉన్నత స్థాయి మానసిక ప్రక్రియ కానిది","Comparing","పోల్చడం",
+"Analysing, synthesising and creative thinking are higher functions. Comparing is lower.",
+"విశ్లేషించడం, సంశ్లేషించడం, సృజనాత్మక ఆలోచన ఉన్నత స్థాయి. పోల్చడం దిగువ స్థాయి."],
+[450,"According to Vygotsky, correct use of higher mental functions helps in: A) Controlling aggressive behaviour B) Self regulation","వైగోట్స్కీ ప్రకారం ఉన్నత స్థాయి మానసిక ప్రక్రియల ఉపయోగం: A) దౌర్జన్య ప్రవర్తన అదుపు B) స్వీయ క్రమీకరణ","Both A and B","A మరియు B రెండూ",
+"Higher mental functions help a person control impulses and regulate his own behaviour.",
+"ఉన్నత మానసిక ప్రక్రియలు ఆవేశాన్ని అదుపు చేయడానికి, స్వీయ క్రమీకరణకు సహాయపడతాయి."],
+[451,"ZPD means: A) Learning by themselves B) Learning with the help of a more knowledgeable person","ZPD అనగా: A) తమకు తాముగా నేర్చుకోవడం B) ఎక్కువ జ్ఞానం ఉన్న వ్యక్తి సహకారంతో నేర్చుకోవడం","B − A","B − A",
+"ZPD = what the child can do with help (B) minus what he can do alone (A).",
+"ZPD = సహాయంతో చేయగలిగింది (B) − ఒంటరిగా చేయగలిగింది (A)."],
+[452,"A: 'Social scaffolding' is used by Vygotsky. B: 'Instructional scaffolding' is used by Bruner.","A: వైగోట్స్కీ 'సామాజిక స్కాఫోల్డింగ్' అనే పదాన్ని వాడారు. B: బ్రూనర్ 'ఇన్‌స్ట్రక్షనల్ స్కాఫోల్డింగ్' అనే పదాన్ని వాడారు.","Both A & B are correct","A, B రెండూ సరైనవి",
+"Both ideas of temporary support in learning are linked with these two thinkers.",
+"అభ్యసనంలో తాత్కాలిక సహాయం అనే ఈ రెండు భావనలు ఈ ఇద్దరికీ సంబంధించినవే."],
+[453,"According to Vygotsky, this plays a major role in cognitive development","వైగోట్స్కీ ప్రకారం జ్ఞానాత్మక వికాసంలో ప్రముఖ పాత్ర పోషించేది","Language","భాష",
+"Vygotsky saw language as the main tool of thought.",
+"భాషే ఆలోచనకు ప్రధాన సాధనమని వైగోట్స్కీ భావించారు."],
+[454,"According to Vygotsky, the private speech of childhood turns into this as the child grows","వైగోట్స్కీ ప్రకారం బాల్యంలోని వ్యక్తిగత భాషణం పెద్దయ్యేసరికి ఈ భాషగా మారుతుంది","Inner speech","అంతర్భాషణం",
+"Children talk aloud to themselves; later this becomes silent inner speech (thinking).",
+"పిల్లలు తమలో తాము పైకి మాట్లాడుకుంటారు. తర్వాత అది మౌన అంతర్భాషణం (ఆలోచన) అవుతుంది."],
+[455,"One of the following is not related to Gestaltism","కింది వారిలో గెస్టాల్ట్ వాదానికి చెందనివారు","Skinner","స్కిన్నర్",
+"Wertheimer, Koffka and Köhler founded Gestalt psychology. Skinner was a behaviourist.",
+"వర్దీమర్, కోఫ్కా, కోహ్లర్ గెస్టాల్ట్ వాద స్థాపకులు. స్కిన్నర్ ప్రవర్తనావాది."],
+[456,"The book 'The Mentality of Apes' was written by","'ది మెంటాలిటీ ఆఫ్ ఏప్స్' పుస్తక రచయిత","Köhler","కోహ్లర్",
+"Wolfgang Köhler wrote it about his insight experiments with chimpanzees.",
+"చింపాంజీలపై అంతర్దృష్టి ప్రయోగాల గురించి వోల్ఫ్‌గాంగ్ కోహ్లర్ ఈ పుస్తకం రాశారు."],
+[457,"Köhler conducted experiments on this animal","కోహ్లర్ ఈ జంతువుపై ప్రయోగాలు చేశారు","Chimpanzee","చింపాంజీ",
+"Köhler studied chimpanzees on the island of Tenerife.",
+"కోహ్లర్ టెనెరిఫ్ దీవిలో చింపాంజీలపై ప్రయోగాలు చేశారు."],
+[458,"Gestalt means","గెస్టాల్ట్ అనగా","Configuration","సమగ్రాకృతి",
+"Gestalt is a German word meaning whole form or configuration.",
+"గెస్టాల్ట్ అనే జర్మన్ పదానికి అర్థం సమగ్ర రూపం లేదా సమగ్రాకృతి."],
+[459,"In Köhler's experiment, the name of the chimpanzee is","కోహ్లర్ ప్రయోగంలో చింపాంజీ పేరు","Sultan","సుల్తాన్",
+"Köhler's cleverest chimpanzee, Sultan, joined two sticks to reach a banana.",
+"కోహ్లర్ చింపాంజీ సుల్తాన్ రెండు కర్రలను కలిపి అరటిపండు అందుకుంది."],
+[460,"In this type of learning, the solution comes like a flash","ఈ రకపు అభ్యసనలో ఆలోచన మెరుపులా వస్తుంది","Insightful learning","అంతర్దృష్టి అభ్యసనం",
+"The sudden 'aha' understanding is insight learning (Köhler).",
+"ఒక్కసారిగా తట్టే అవగాహన అంతర్దృష్టి అభ్యసనం (కోహ్లర్)."],
+[461,"In insightful learning, the chimpanzee perceived the different parts as","అంతర్దృష్టి అభ్యసనలో చింపాంజీ వివిధ అంశాలను ఈ విధంగా గ్రహించింది","An organised whole","వ్యవస్థీకృత మొత్తంగా",
+"The chimpanzee saw the sticks and banana as one whole situation, not separate bits.",
+"చింపాంజీ కర్రలు, అరటిపండును విడివిడిగా కాకుండా ఒకే సమగ్ర పరిస్థితిగా చూసింది."],
+[462,"This is not a characteristic of insightful learning","అంతర్దృష్టి అభ్యసన లక్షణం కానిది","Learning a new task by conditioning","నిబంధన ద్వారా కొత్త అంశాన్ని నేర్చుకోవడం",
+"Insight learning means seeing the whole situation and solving it suddenly. Conditioning is a different theory.",
+"అంతర్దృష్టి అంటే మొత్తం పరిస్థితిని చూసి ఒక్కసారిగా పరిష్కరించడం. నిబంధన వేరే సిద్ధాంతం."],
+[463,"First step in action research","చర్యాత్మక పరిశోధనలో మొదటి సోపానం","Identification of the problem","సమస్యను గుర్తించడం",
+"Action research starts by identifying a classroom problem.",
+"తరగతి గది సమస్యను గుర్తించడంతో చర్యాత్మక పరిశోధన మొదలవుతుంది."],
+[464,"This leadership focuses on serving the needs of team members","బృంద సభ్యుల అవసరాలను తీర్చడానికి ప్రాధాన్యత చూపే నాయకత్వం","Servant leadership","సేవా నాయకత్వం",
+"A servant leader puts the team's needs first.",
+"సేవా నాయకుడు బృంద అవసరాలకు మొదటి ప్రాధాన్యం ఇస్తాడు."],
+[465,"This is not a characteristic of a good classroom environment","మంచి తరగతి గది వాతావరణానికి సంబంధించని లక్షణం","No clear rules","స్పష్టమైన నియమాలు లేకపోవడం",
+"A good classroom is safe, positive and supportive, with clear rules.",
+"మంచి తరగతి గది సురక్షితం, సానుకూలం, సహాయకరం, స్పష్టమైన నియమాలతో ఉంటుంది."],
+[466,"The final step in an action research plan","చర్యాత్మక పరిశోధన ప్రణాళికలో చివరి సోపానం","Preparation of the report","నివేదికను తయారుచేయడం",
+"After action and evaluation, the findings are written up as a report.",
+"చర్య, మూల్యాంకనం తర్వాత ఫలితాలను నివేదికగా రాయడం చివరి సోపానం."],
+[467,"In classroom management, this is not related to physical organisation","తరగతి గది నిర్వహణలో భౌతిక వ్యవస్థాపనకు సంబంధించనిది","Lesson construction","పాఠ్యాంశ నిర్మాణం",
+"Seating, boards and projectors are physical arrangements. Lesson construction is academic planning.",
+"కూర్చునే అమరిక, బోర్డులు, ప్రొజెక్టర్లు భౌతిక ఏర్పాట్లు. పాఠ్యాంశ నిర్మాణం విద్యా ప్రణాళిక."],
+[468,"The art of influencing, guiding and inspiring individuals in a team is","బృందంలోని వ్యక్తులను ప్రభావితం, దిశానిర్దేశం, ప్రేరణ కల్గించే కళ","Leadership","నాయకత్వం",
+"Influencing and inspiring a group towards a goal is leadership.",
+"ఒక లక్ష్యం వైపు బృందాన్ని ప్రభావితం చేసి ప్రేరేపించడమే నాయకత్వం."],
+[469,"This is not a quality of a good leader","మంచి నాయకుని లక్షణం కానిది","Unstable person","అస్థిరమైనవాడు",
+"A good leader has vision, motivates and influences others. Instability is not a quality.",
+"మంచి నాయకుడు దార్శనికుడు, ప్రేరణ ఇస్తాడు, ప్రభావితం చేస్తాడు. అస్థిరత లక్షణం కాదు."],
+[470,"Leadership style where the leader makes decisions without consulting others","ఇతరులను సంప్రదించకుండా నాయకుడే నిర్ణయాలు తీసుకునే నాయకత్వ శైలి","Autocratic leadership","నిరంకుశత్వ నాయకత్వం",
+"The autocratic leader decides alone.",
+"నిరంకుశ నాయకుడు ఒంటరిగా నిర్ణయిస్తాడు."],
+[471,"Father of action research","చర్యాత్మక పరిశోధన పితామహుడు","Kurt Lewin","కర్ట్ లెవిన్",
+"Kurt Lewin introduced action research in 1946.",
+"కర్ట్ లెవిన్ 1946లో చర్యాత్మక పరిశోధనను పరిచయం చేశారు."],
+[472,"Seating arrangement in straight lines","సరళ రేఖలుగా కూర్చునే అమరిక","Traditional arrangement","సాంప్రదాయిక అమరిక",
+"Rows facing the board is the traditional arrangement.",
+"బోర్డు వైపు వరుసలుగా కూర్చోవడం సాంప్రదాయిక అమరిక."],
+[473,"Seating arrangement suitable for collaborative work","భాగస్వామ్య పనికి అనువైన కూర్చునే అమరిక","Small group clusters","చిన్న క్లస్టర్ సమూహాలు",
+"Small groups sitting together make discussion and teamwork easy.",
+"చిన్న సమూహాలుగా కూర్చుంటే చర్చ, బృందకార్యం సులభం."],
+[474,"An e-classroom uses","e-క్లాస్‌రూమ్‌లో","Multimedia","మల్టీమీడియా ఉపయోగిస్తాం",
+"An e-classroom uses computers, projectors, video and audio: multimedia.",
+"e-తరగతిలో కంప్యూటర్లు, ప్రొజెక్టర్లు, వీడియో, ఆడియో వంటి మల్టీమీడియా వాడతాం."],
+[475,"An effective classroom","ప్రభావవంతమైన తరగతి గది","Supports the students' needs","విద్యార్థుల అవసరాలకు సహాయపడేది",
+"An effective classroom is safe and meets students' needs.",
+"ప్రభావవంతమైన తరగతి గది సురక్షితంగా ఉండి విద్యార్థుల అవసరాలు తీరుస్తుంది."],
+[476,"Most desirable outcome of classroom management","తరగతి గది నిర్వహణలో ముఖ్యమైన ఉత్పాదక అంశం","Good learning environment","మంచి అభ్యసనా వాతావరణం",
+"The aim of classroom management is a good learning environment, not silence or fear.",
+"తరగతి నిర్వహణ లక్ష్యం మౌనం, భయం కాదు, మంచి అభ్యసన వాతావరణం."],
+[477,"Classroom management principles of respect and empathy come under this approach","తరగతి నిర్వహణలో గౌరవం, సహానుభూతి నియమాలు ఈ వాదం కిందకు వస్తాయి","Humanistic approach","మానవతావాదం",
+"Respect, empathy and care for the learner are humanistic values.",
+"అభ్యాసకుని పట్ల గౌరవం, సహానుభూతి, శ్రద్ధ మానవతావాద విలువలు."],
+[478,"As a leader, a teacher should not","ఒక నాయకునిగా ఉపాధ్యాయుడు చేయకూడనిది","Encourage conflicts","సంఘర్షణలను ప్రోత్సహించడం",
+"A teacher-leader builds confidence, manages time and motivates. He resolves conflicts, not encourages them.",
+"ఉపాధ్యాయ నాయకుడు నమ్మకం కలిగిస్తాడు, సమయాన్ని నిర్వహిస్తాడు, ప్రేరేపిస్తాడు. సంఘర్షణలను పరిష్కరిస్తాడు, ప్రోత్సహించడు."],
+[479,"Kurt Lewin's model of action research does not have this step","కర్ట్ లెవిన్ చర్యాత్మక పరిశోధనా నమూనాలో లేని సోపానం","Sharing","పంచుకోవడం",
+"Lewin's cycle: planning, action, observation and reflection.",
+"లెవిన్ చక్రం: ప్రణాళిక, చర్య, పరిశీలన, ప్రతిఫలనం."],
+[480,"Leadership that involves team members in decision making","నిర్ణయాలు తీసుకునే ప్రక్రియలో బృంద సభ్యులను ప్రోత్సహించే నాయకత్వం","Democratic leadership","ప్రజాస్వామ్య నాయకత్వం",
+"A democratic leader shares decision making with the group.",
+"ప్రజాస్వామ్య నాయకుడు నిర్ణయాలలో బృందాన్ని భాగస్వామ్యం చేస్తాడు."],
+[481,"Poor strategy for managing classroom time","తరగతి కాలాన్ని సద్వినియోగపరచుకోవడంలో బలహీనమైన వ్యూహం","Unawareness of the learning objectives","బోధనా లక్ష్యాల పట్ల అవగాహన లేకపోవడం",
+"Clear goals, technology and priorities save time. Not knowing objectives wastes it.",
+"స్పష్టమైన లక్ష్యాలు, సాంకేతికత, ప్రాధాన్యాలు సమయం ఆదా చేస్తాయి. లక్ష్యాలు తెలియకపోతే సమయం వృథా."],
+[482,"Most suitable seating arrangement for a teacher-centred lecture","ఉపాధ్యాయ కేంద్ర ఉపన్యాస పద్ధతికి అనువైన కూర్చునే అమరిక","Traditional rows","సాంప్రదాయిక వరుసలు",
+"In a lecture all students face the teacher, so traditional rows suit best.",
+"ఉపన్యాసంలో అందరూ ఉపాధ్యాయుని వైపు చూడాలి. కాబట్టి సాంప్రదాయిక వరుసలు అనువైనవి."],
+[483,"Delegative leadership is also called","డెలిగేటివ్ నాయకత్వం అని దీనిని అంటాం","Laissez-faire leadership","లేసెజ్ ఫెయిర్ నాయకత్వం",
+"Laissez-faire leaders hand over decisions to the group with little interference.",
+"లేసెజ్ ఫెయిర్ నాయకుడు జోక్యం చేసుకోకుండా నిర్ణయాలను బృందానికే వదిలేస్తాడు."],
+[484,"Guidance is a","మార్గదర్శకత్వం అనేది","Continuous process","నిరంతరం కొనసాగే ప్రక్రియ",
+"Guidance is not a one-time act; it continues throughout life.",
+"మార్గదర్శకత్వం ఒక్కసారి చేసేది కాదు, జీవితాంతం కొనసాగే ప్రక్రియ."],
+[485,"The process of giving guidance is","మార్గదర్శకత్వాన్నిచ్చే సహాయ ప్రక్రియ","Counselling","మంత్రణం – కౌన్సెలింగ్",
+"Counselling is the face-to-face process through which guidance is given.",
+"ముఖాముఖిగా మార్గదర్శకత్వాన్ని అందించే ప్రక్రియ మంత్రణం (కౌన్సెలింగ్)."],
+[486,"Characteristic of a well-balanced person","సమతుల్యత కలిగిన వ్యక్తి లక్షణం","Emotionally stable","భావోద్వేగపరంగా స్థిరంగా ఉంటాడు",
+"A balanced person stays emotionally stable and adjusts well.",
+"సమతుల్యత గల వ్యక్తి భావోద్వేగ స్థిరత్వంతో బాగా సర్దుకుపోతాడు."],
+[487,"Guidance given to select a suitable career is","సరైన ఉద్యోగాన్ని ఎంపిక చేసుకోవడానికి ఇచ్చే మార్గదర్శకత్వం","Vocational guidance","ఔద్యోగిక మార్గదర్శకత్వం",
+"Help in choosing an occupation is vocational guidance.",
+"వృత్తి ఎంపికలో సహాయం ఔద్యోగిక మార్గదర్శకత్వం."],
+[488,"Guidance given for personal problems is","వ్యక్తిగత సమస్యలకు ఇచ్చే మార్గదర్శకత్వం","Personal guidance","వ్యక్తిగత మార్గదర్శకత్వం",
+"Help with personal, emotional and family problems is personal guidance.",
+"వ్యక్తిగత, భావోద్వేగ, కుటుంబ సమస్యలలో సహాయం వ్యక్తిగత మార్గదర్శకత్వం."],
+[489,"Defence mechanisms help in","రక్షణ తంత్రాలు ఇందుకు సహాయపడతాయి","Reducing psychological stress","మానసిక ఒత్తిడిని తగ్గించుకోవడానికి",
+"Defence mechanisms protect the mind from anxiety and reduce stress for a while.",
+"రక్షణ తంత్రాలు మనసును ఆందోళన నుండి కాపాడి తాత్కాలికంగా ఒత్తిడి తగ్గిస్తాయి."],
+[490,"Characteristic of a well-adjusted person","సర్దుబాటు కలిగిన వ్యక్తి యొక్క లక్షణం","Knows about his abilities","తన శక్తి సామర్థ్యాలను తెలుసుకొని ఉంటాడు",
+"A well-adjusted person knows his strengths and limits realistically.",
+"సర్దుబాటు గల వ్యక్తి తన బలాలు, పరిమితులను వాస్తవికంగా తెలుసుకుంటాడు."],
+[491,"Defence mechanism that refuses to accept reality","వాస్తవాన్ని అంగీకరించేందుకు వ్యతిరేకించే రక్షణ తంత్రం","Denial","నిరాకరణ",
+"Refusing to accept a painful fact as true is denial.",
+"బాధాకర వాస్తవాన్ని అంగీకరించకపోవడం నిరాకరణ."],
+[492,"The type of counselling where the counsellor dominates","మంత్రణకుడు ఆధిపత్యాన్ని చూపే మంత్రణం","Directive counselling","నిర్దేశక మంత్రణం",
+"In directive counselling (E.G. Williamson) the counsellor leads and advises.",
+"నిర్దేశక మంత్రణంలో (ఇ.జి. విలియమ్సన్) మంత్రణకుడు నడిపిస్తూ సలహా ఇస్తాడు."],
+[493,"Incorrect statement regarding counselling","కౌన్సెలింగ్‌కు సంబంధించి సరికాని వాక్యం","Psychological tests do not help in counselling","మంత్రణంలో మనోవిజ్ఞాన పరీక్షలు సహాయపడవు",
+"Psychological tests do help a counsellor understand the person, so this statement is wrong.",
+"మనోవిజ్ఞాన పరీక్షలు వ్యక్తిని అర్థం చేసుకోవడానికి మంత్రణకునికి సహాయపడతాయి. కాబట్టి ఈ వాక్యం సరికాదు."],
+[494,"Defence mechanism that pushes sorrowful thoughts into the unconscious","విచారకరమైన విషయాలను అచేతన మనస్సులోకి పంపే రక్షణ తంత్రం","Repression","దమనం",
+"Pushing painful thoughts into the unconscious is repression.",
+"బాధాకర ఆలోచనలను అచేతనంలోకి నెట్టడం దమనం."],
+[495,"Well-being is related to these aspects","సంపూర్ణారోగ్యం ఈ అంశాలతో సంబంధం కలిగి ఉంటుంది","Related to all: physical, mental and social","అన్ని అంశాలతో – శారీరక, మానసిక, సాంఘిక",
+"WHO defines health as physical, mental and social well-being.",
+"ప్రపంచ ఆరోగ్య సంస్థ ప్రకారం ఆరోగ్యం అంటే శారీరక, మానసిక, సాంఘిక సంక్షేమం."],
+[496,"Group guidance is given to","సమూహ మార్గదర్శకత్వం వీరికి ఇస్తారు","A group of individuals of the same class","ఒకే తరగతికి చెందిన సమూహ వ్యక్తులకు",
+"Group guidance is given to a group with similar needs, like students of one class.",
+"ఒకే తరగతి విద్యార్థుల వంటి ఒకేలాంటి అవసరాలు గల సమూహానికి సమూహ మార్గదర్శకత్వం ఇస్తారు."],
+[497,"It is needed for good physical and mental health","సరైన శారీరక, మానసిక ఆరోగ్యానికి ఇది అవసరం","Regular physical exercise","రోజూ వ్యాయామం చేయాలి",
+"Regular exercise keeps both body and mind healthy.",
+"రోజూ వ్యాయామం శరీరాన్ని, మనసును ఆరోగ్యంగా ఉంచుతుంది."],
+[498,"Positive factor that influences mental health","మానసిక ఆరోగ్యాన్ని ప్రభావితం చేసే ధనాత్మక అంశం","Good social relations","మంచి సాంఘిక సంబంధాలు",
+"Good relationships support mental health; isolation and stress harm it.",
+"మంచి సంబంధాలు మానసిక ఆరోగ్యానికి తోడ్పడతాయి. ఒంటరితనం, ఒత్తిడి హాని చేస్తాయి."],
+[499,"Balance between a person's needs and desires","వ్యక్తి అవసరాలకు, కోరికలకు మధ్య ఉండే సమతుల్యం","Adjustment","సర్దుబాటు",
+"Adjustment is the balance between needs and the conditions that satisfy them.",
+"అవసరాలకు, వాటిని తీర్చే పరిస్థితులకు మధ్య సమతుల్యమే సర్దుబాటు."],
+[500,"Daydreaming is this type of defence mechanism","పగటికలలు కనడం ఈ రకమైన రక్షణ తంత్రం","Fantasy","స్వైర కల్పన",
+"Escaping into imagined success or pleasure is fantasy (daydreaming).",
+"ఊహల్లో విజయం, ఆనందం పొందడం స్వైర కల్పన (పగటికలలు)."]
+];
+const Q = R.map(r=>({n:r[0],e:r[1],t:r[2],o:[[r[3],r[4]]],a:1,xe:r[5],xt:r[6]}));
+
+</script>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const qList=$("#qList");
+
+qList.innerHTML=Q.map((q,i)=>`
+<article class="q" id="q${q.n}">
+  <div class="qhead"><span class="qno">ప్రశ్న ${q.n}</span>
+    <button class="sw" role="switch" aria-checked="false" data-q="${i}" aria-label="ప్రశ్న ${q.n} చదవడం ON/OFF"><span class="track"><span class="knob"></span></span><span class="swlbl">OFF</span></button></div>
+  <div class="qtext"><div class="en">${esc(q.e)}</div><div class="te">${esc(q.t)}</div></div>
+  <div class="ans">✔ సమాధానం / Answer: ${esc(q.o[q.a-1][0])} — ${esc(q.o[q.a-1][1])}</div>
+  <div class="exp"><div class="en sm"><b>Explanation:</b> ${esc(q.xe)}</div><div class="sm"><b>వివరణ:</b> ${esc(q.xt)}</div></div>
+</article>`).join("");
+
+const synth=("speechSynthesis" in window)?window.speechSynthesis:null;
+const isAndroid=/Android/i.test(navigator.userAgent);
+let teV=null,enV=null;
+function loadVoices(){if(!synth)return;let vs=[];try{vs=synth.getVoices()||[];}catch(_){}
+  teV=vs.find(v=>/^te/i.test(v.lang))||null;
+  enV=vs.find(v=>/en[-_]IN/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;
+  $("#noTe").hidden=!vs.length||!!teV;}
+if(synth){loadVoices();try{synth.addEventListener("voiceschanged",loadVoices);}catch(_){synth.onvoiceschanged=loadVoices;}}
+else{$("#noTTS").hidden=false;}
+
+function chunks(t){return (t.match(/[^.?!।]+[.?!।]?/g)||[t]).map(s=>s.trim()).filter(Boolean);}
+function qSeg(q){const L=$("#lang").value,s=[],a=q.o[q.a-1];
+  const add=(lang,txt)=>chunks(txt).forEach(c=>s.push({lang,txt:c}));
+  if(L!=="te")add("en",`Question ${q.n}. ${q.e}. The answer is ${a[0]}. Explanation. ${q.xe}`);
+  if(L!=="en")add("te",`ప్రశ్న ${q.n}. ${q.t}. సమాధానం ${a[1]}. వివరణ. ${q.xt}`);
+  return s;}
+
+let mode=null,idx=0,resumeAt=0,segs=[],si=0,token=0,keep=null,guard=null,started=false,check=null;
+function setSw(el,on){if(!el)return;el.setAttribute("aria-checked",on?"true":"false");const l=el.querySelector(".swlbl b")||el.querySelector(".swlbl");l.textContent=on?"ON":"OFF";}
+function allOff(){document.querySelectorAll(".sw").forEach(s=>setSw(s,false));}
+function mark(el){document.querySelectorAll(".reading").forEach(e=>e.classList.remove("reading"));
+  if(el){el.classList.add("reading");try{el.scrollIntoView({behavior:"smooth",block:"start"});}catch(_){el.scrollIntoView();}}}
+function cardSw(i){return document.querySelector('.sw[data-q="'+i+'"]');}
+function showSwitches(){allOff();if(mode==="all")setSw($("#mainSw"),true);if(mode)setSw(cardSw(idx),true);}
+
+function speakNext(t){
+  clearTimeout(guard);
+  if(t!==token)return;
+  if(si>=segs.length){
+    if(mode==="all"&&idx+1<Q.length){idx++;startItem(t);return;}
+    finish();return;}
+  const sg=segs[si++];let u;
+  try{u=new SpeechSynthesisUtterance(sg.txt);}catch(_){noSpeech();return;}
+  u.lang=sg.lang==="te"?"te-IN":"en-IN";const v=sg.lang==="te"?teV:enV;if(v)u.voice=v;
+  u.rate=parseFloat($("#rate").value)||1;
+  let moved=false;const next=()=>{if(moved)return;moved=true;speakNext(t);};
+  u.onstart=()=>{started=true;$("#noTTS").hidden=true;};
+  u.onend=next;
+  u.onerror=e=>{if(e&&(e.error==="interrupted"||e.error==="canceled"))return;next();};
+  /* if the engine never reports the end, move on after a safe time */
+  guard=setTimeout(()=>{if(t===token&&!synth.speaking)next();},Math.max(6000,sg.txt.length*180/(u.rate)));
+  synth.speak(u);}
+function startItem(t){const q=Q[idx];resumeAt=idx;showSwitches();mark(document.getElementById("q"+q.n));
+  segs=qSeg(q);si=0;$("#status").textContent="చదువుతోంది: ప్రశ్న "+q.n;speakNext(t);}
+function noSpeech(){$("#noTTS").hidden=false;$("#status").textContent="ఈ వీక్షణలో చదవడం పనిచేయడం లేదు. index.html ఫైల్‌ను Chrome లో తెరవండి.";}
+/* must run directly inside the tap, so phones allow the sound */
+function start(m,i){
+  if(!synth){allOff();noSpeech();return;}
+  token++;const t=token;clearInterval(keep);clearTimeout(guard);clearTimeout(check);
+  try{synth.cancel();}catch(_){}
+  try{if(synth.paused)synth.resume();}catch(_){}
+  mode=m;idx=i;started=false;loadVoices();
+  if(!isAndroid){keep=setInterval(()=>{if(synth.speaking&&!synth.paused){synth.pause();synth.resume();}},10000);}
+  startItem(t);
+  check=setTimeout(()=>{if(t===token&&mode&&!started&&!synth.speaking)noSpeech();},4000);}
+function halt(){token++;clearTimeout(guard);clearTimeout(check);clearInterval(keep);mode=null;try{synth&&synth.cancel();}catch(_){}}
+function stopAll(msg){halt();allOff();mark(null);$("#status").textContent=msg;}
+function finish(){
+  if(mode==="all"){resumeAt=0;stopAll("అన్ని ప్రశ్నలు పూర్తయ్యాయి. మళ్లీ వినడానికి పై స్విచ్ ON చేయండి.");}
+  else stopAll("ప్రశ్న "+Q[idx].n+" పూర్తయింది.");}
+
+$("#mainSw").addEventListener("click",function(){
+  if(mode==="all")stopAll("ఆపబడింది. మళ్లీ ON చేస్తే ప్రశ్న "+Q[resumeAt].n+" నుండి కొనసాగుతుంది.");
+  else start("all",resumeAt);});
+qList.addEventListener("click",function(e){const b=e.target.closest(".sw");if(!b)return;const i=+b.dataset.q;
+  if(mode&&idx===i)stopAll("ప్రశ్న "+Q[i].n+" చదవడం ఆపబడింది.");
+  else start("one",i);});
+$("#lang").addEventListener("change",()=>{if(mode)start(mode,idx);});
+})();
+</script>
+</body></html>
